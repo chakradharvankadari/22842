@@ -1,29 +1,26 @@
-URL Shortener Microservice
+**URL Shortener Microservice**
 A simple and lightweight Node.js + Express service that turns long, messy URLs into short, clean ones—with expiration and basic click stats.
 
-Features
-Quick URL Shortening: Auto-generated or custom shortcodes
+**Features**
+-->Quick URL Shortening: Auto-generated or custom shortcodes
 
-Link Expiry: Control how long links remain valid (default: 30 mins)
+-->Link Expiry: Control how long links remain valid (default: 30 mins)
 
-Click Tracking: See how often a short URL is accessed
+-->Click Tracking: See how often a short URL is accessed
 
-Custom Codes: Choose your own short and catchy code
+-->Custom Codes: Choose your own short and catchy code
 
-Auto-Cleanup: Expired links get cleaned up regularly
+-->Auto-Cleanup: Expired links get cleaned up regularly
 
-Verbose Logging: Logs requests, errors, and performance data
+-->Verbose Logging: Logs requests, errors, and performance data
 
-Getting Started
-Prerequisites
-Node.js (v14+)
+***Getting Started***
+**Prerequisites**
+-->Node.js (v14+)
+-->npm (comes with Node)
 
-npm (comes with Node)
+**Installation**
 
-Installation
-bash
-Copy
-Edit
 # Clone the repo
 git clone <repo-url>
 cd url-shortener
@@ -34,7 +31,7 @@ npm start
 By default, it runs at:
 http://localhost:3000
 
-API Usage
+**API Usage**
 Shorten a URL
 POST /shorturls
 
@@ -70,7 +67,7 @@ Returns:
   "expiry": "2025-01-01T12:00:00.000Z",
   "accessCount": 12
 }
-How It Works
+**How It Works**
 In-memory storage (cleared on restart)
 
 Every 5 minutes, expired links are removed
@@ -79,9 +76,9 @@ Shortcodes are validated (3-20 alphanumeric characters)
 
 Logs track every request and error in detail
 
-Configuration
+**Configuration**
 Set these as environment variables if needed:
 PORT (default: 3000)
 
-BASE_URL (default: http://localhost:3000)
+**BASE_URL (default: http://localhost:3000)**
 >node apis.js
